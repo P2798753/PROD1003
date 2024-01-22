@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="menu">
+      <a class="menu-button menu-button-active" href="portfolio.html" aria-label="Portfolio Button">PORTFOLIO</a>
+      <a class="menu-button" href="about.html" aria-label="About Button">ABOUT</a>
+    </div>
+    <h1>My Portfolio</h1>
+    <div class="CenterAlign">
+      <p>
+        <strong>Welcome to my portfolio! This page will consist of work I've created for my clients. 
+        <br/>Click the images to get more information. Check out the about page if you want to know more about my background as a Media Producer.</strong>
+      </p>
+      <a href="Castle.JPG" id="CastleLink" style="margin-right: 20px;"><img id="Castle" src="Castle.JPG" alt="Stone Castle Hidden Behind Trees"></a>
+      <a href="OminousPortrait.JPG" id="OminousPortraitLink" style="margin-right: 20px;"><img id="OminousPortrait" src="OminousPortrait.JPG" alt="Man in Red and Black Lighting"></a>
+      <button id="ImagePopup" style="display:none;" aria-label="Close Image"><img id="PopupImage" src="" style="max-width:90vw;max-height:90vh;"><audio id="wooshSound" src="woosh.mp3"></audio></button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
