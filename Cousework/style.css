@@ -1,0 +1,260 @@
+/* Universal Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Set the background color for the entire page */
+}
+
+/* Navigation Styles */
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: #6a0dad; /* Set background color for navigation bar */
+}
+
+.menu a {
+  color: white; /* Set text color for navigation links */
+  margin-right: 2rem;
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #6a0dad; /* Set heading color */
+}
+
+/* Portfolio Grid Styles */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img,
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(106, 13, 173, 0.5); /* Semi-transparent background for overlay */
+  color: #f1f1f1; /* Text color for overlay */
+  width: 100%;
+  transition: .3s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Hover Effect on Overlay */
+.image-container:hover .overlay,
+.image-container:focus-within .overlay {
+  opacity: 1; /* Show overlay on hover or focus */
+}
+
+/* Styles for Fullscreen Image Overlay */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(106, 13, 173, 0.5); /* Semi-transparent background for fullscreen image */
+  z-index: 999; /* Ensure overlay appears on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-image {
+  max-width: 90vw; /* Limit image width */
+  max-height: 90vh; /* Limit image height */
+  object-fit: contain; /* Maintain aspect ratio of image */
+}
+
+/* Styles for Blur Effect */
+.blur {
+  filter: blur(10px); /* Apply blur effect */
+}
+
+/* Disable Scrolling */
+.no-scroll {
+  overflow: hidden; /* Prevent scrolling when overlay is active */
+}
+
+/* Video Container Styles */
+.video-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles for Video Overlay */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(106, 13, 173, 0.5); /* Semi-transparent background for video overlay */
+  z-index: 999; /* Ensure overlay appears on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-overlay iframe {
+  max-width: 90vw; /* Limit video width */
+  max-height: 90vh; /* Limit video height */
+}
+
+/* Styles for Main Content */
+.main-content {
+  margin-top: 60px; /* Provide space below navigation */
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form-box {
+  background-color: #6a0dad; /* Set background color for contact form */
+  padding: 20px;
+  color: #fff; /* Set text color for contact form */
+  width: 300px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #6a0dad; /* Set background color for submit button */
+  color: white; /* Set text color for submit button */
+  border: none;
+  cursor: pointer;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #4b0276; /* Darken background color on hover */
+}
+
+/* YouTube Link Arrow Styles */
+.arrow-text {
+  position: fixed;
+  bottom: 70px; /* Position arrow text relative to bottom of the viewport */
+  right: 20px; /* Position arrow text relative to right side of the viewport */
+  max-width: calc(100% - 120px); /* Set maximum width for arrow text */
+  padding: 10px;
+  background-color: rgba(106, 13, 173, 0.8); /* Semi-transparent background for arrow text */
+  color: white; /* Text color for arrow text */
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px; /* Rounded corners for arrow text */
+  z-index: 999; /* Ensure arrow text appears on top of other content */
+}
+
+.youtube-arrow {
+  position: fixed;
+  bottom: 20px; /* Position arrow relative to bottom of the viewport */
+  right: 20px; /* Position arrow relative to right side of the viewport */
+  z-index: 998; /* Ensure arrow appears above other content */
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid #6a0dad; /* Set arrow color */
+  transition: all 0.2s ease-in-out; /* Add smooth transition on hover */
+}
+
+/* Hover Effect on YouTube Link Arrow */
+.youtube-link:hover .arrow {
+  transform: scale(1.2); /* Scale arrow on hover */
+}
+
+/* GIF Container Styles */
+.about-me-gif {
+  width: 400px; /* Set width for GIF */
+  height: auto; /* Maintain aspect ratio */
+  animation: pulse 3s infinite alternate; /* Apply pulsating animation */
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1); /* Initial scale */
+  }
+  100% {
+      transform: scale(1.2); /* Scaled state */
+  }
+}
+
+.gif-container {
+  position: fixed;
+  top: 50%; /* Position GIF container vertically */
+  right: 100px; /* Position GIF container from right side */
+  transform: translateY(-50%); /* Center GIF container vertically */
+}
+
+.about-me-gif {
+  width: 400px; /* Set width for GIF */
+  height: auto; /* Maintain aspect ratio */
+}
